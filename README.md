@@ -3,6 +3,9 @@
 Configuração do nvim para MacBook, usando as seguintes ferramentas
 * iterm2
 * lua 
+* zsh
+* oh my zsh
+* lazy git
 * tema --> https://github.com/bluz71/vim-nightfly-colors
 * tema para o iterm2 --> https://github.com/josean-dev/dev-environment-files/blob/main/coolnight.itermcolors
 
