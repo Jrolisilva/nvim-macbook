@@ -95,6 +95,15 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- pairs of characters completion
+	use({
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup()
+		end,
+	})
+
 	use("github/copilot.vim")
 
 	if packer_bootstrap then
