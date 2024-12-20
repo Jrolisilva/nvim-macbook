@@ -25,6 +25,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<C-n>", ":NvimTreeOpen<CR>") -- Abre o nvim-tree
 keymap.set("n", "<C-t>", ":NvimTreeToggle<CR>") -- Alterna a visibilidade do nvim-tree
 keymap.set("n", "<C-f>", ":NvimTreeFindFile<CR>")
+keymap.set("n", "<C-z>", "u") -- Desfazer com Ctrl + z
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- encontre arquivos no diretório de trabalho atual, respeita .gitignore
