@@ -104,6 +104,13 @@ return packer.startup(function(use)
 		end,
 	})
 
+	use({
+		"terrortylor/nvim-comment",
+		config = function()
+			require("nvim_comment").setup()
+		end,
+	})
+
 	use("github/copilot.vim")
 
 	if packer_bootstrap then
