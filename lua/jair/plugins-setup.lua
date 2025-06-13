@@ -110,7 +110,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-<<<<<<< Updated upstream
 	use({
 		"terrortylor/nvim-comment",
 		config = function()
@@ -120,8 +119,6 @@ return packer.startup(function(use)
 
 	use("github/copilot.vim")
 
-=======
->>>>>>> Stashed changes
 	if packer_bootstrap then
 		require("packer").sync()
 	end
