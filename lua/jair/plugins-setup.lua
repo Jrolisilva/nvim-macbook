@@ -95,12 +95,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-  use({
-    "github/copilot.vim",
-    config = function ()
-      vim.cmd("Copilot enable")
-    end
-  })
 	-- pairs of characters completion
 	use({
 		"windwp/nvim-autopairs",
@@ -110,14 +104,16 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- copilot
 	use({
-		"terrortylor/nvim-comment",
+  	"github/copilot.vim",
+		event = "InsertEnter",
 		config = function()
-			require("nvim_comment").setup()
+			vim.defer_fn(function()
+				vim.cmd("Copilot enable")
+			end, 100)
 		end,
 	})
-
-	use("github/copilot.vim")
 
 	if packer_bootstrap then
 		require("packer").sync()
