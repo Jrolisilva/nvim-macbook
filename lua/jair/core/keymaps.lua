@@ -12,6 +12,7 @@ keymap.set("n", "<C-l>", "<C-w>l") -- Mover para a janela da direita
 -- Criação de splits (divisões de janela)
 keymap.set("n", "th", ":split<CR>") -- Split horizontal
 keymap.set("n", "tv", ":vsplit<CR>") -- Split vertical
+keymap.set("n", "tn", ":tabnew<CR>") -- Nova aba
 
 -- Fechar splits e outras janelas
 keymap.set("n", "tt", ":q<CR>") -- Fechar a janela ou split atual
