@@ -35,5 +35,5 @@ keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>") -- encontre a stri
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- encontre a string sob o cursor no diretório de trabalho atual
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
-keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr> lazy_git<cr>") -- comando para abrir o lazygit
+keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>") -- comando para abrir o lazygit
 keymap.set('n', '<D-f>', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true })
