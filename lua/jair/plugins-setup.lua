@@ -94,6 +94,15 @@ return packer.startup(function(use)
 			require("telescope").load_extension("lazygit")
 		end,
 	})
+  
+  -- lazydocker
+  use({
+    "akinsho/toggleterm.nvim",
+    tag = "*",
+    config = function()
+      require("toggleterm").setup()
+    end
+  })
 
 	-- pairs of characters completion
 	use({

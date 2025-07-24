@@ -37,3 +37,20 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>") -- comando para abrir o lazygit
 keymap.set('n', '<D-f>', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true })
+
+local Terminal = require("toggleterm.terminal").Terminal
+
+local lazydocker = Terminal:new({
+  cmd = "lazydocker",
+  dir = "git_dir",
+  direction = "float",
+  float_opts = {
+    border = "double",
+  },
+  hidden = true,
+})
+
+vim.keymap.set("n", "<leader>ld", function()
+  lazydocker:toggle()
+end, { desc = "Abrir LazyDocker (flutuante)" })
+
