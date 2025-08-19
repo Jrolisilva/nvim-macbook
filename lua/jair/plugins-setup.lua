@@ -11,7 +11,7 @@ end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
-vim.cmd([[ 
+vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
@@ -76,8 +76,8 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
 	-- formatting & linting
-	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	use("nvimtools/none-ls.nvim")  -- configure formatters & linters
+	use("jay-babu/mason-null-ls.nvim")  -- bridges gap b/w mason & null-ls
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
@@ -94,7 +94,7 @@ return packer.startup(function(use)
 			require("telescope").load_extension("lazygit")
 		end,
 	})
-  
+
   -- lazydocker
   use({
     "akinsho/toggleterm.nvim",
